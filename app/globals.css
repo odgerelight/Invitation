@@ -1,21 +1,206 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+body {
+  background-color: rgb(233, 228, 228);
+  background: rgb(8, 0, 0);
+  background: linear-gradient(0deg, rgb(145, 143, 143) 0%, rgb(5, 5, 5) 100%);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+h1.title {
+  display: block;
+  margin: auto;
+  text-align: center;
+  font-family: "Henny Penny", cursive;
+  font-size: 50px;
+  color: white;
+  /*background-color: rgba(7, 7, 7, 0.301);*/
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+    -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+h2.subtitle {
+  text-align: center;
+  font-family: "Shadows Into Light Two", cursive;
+  letter-spacing: 1px;
+  font-size: 30px;
+  color: lime;
+  text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+    -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+h2.rotate {
+  transform: rotate(-17deg);
+  color: lime;
+  font-size: 26px;
+  margin-top: 3rem;
+  margin-left: -6rem;
+}
+
+.invite-container {
+  position: absolute;
+  background-color: black;
+  background-image: url(https://iili.io/2BFVUEQ.png);
+  background-repeat: no-repeat;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  transform: translate(-50%, -50%);
+  border: 3px solid rgb(7, 7, 7);
+  outline: 1px solid rgb(71, 70, 70);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+#top {
+  width: 100%;
+  height: 100px;
+}
+
+#head {
+  position: absolute;
+  /* background-image: url(head.png); */
+  background-repeat: no-repeat;
+  top: 125px;
+  left: 25px;
+  width: 80px;
+  height: 68px;
+  transform: rotate(-20deg);
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+#middle-container {
+  width: 100%;
+  height: 100px;
+}
+
+/*animated text*/
+
+svg {
+  font-family: "Henny Penny", cursive;
+  width: 100%;
+  height: 100%;
+}
+svg text {
+  animation: stroke 5s infinite alternate;
+  stroke-width: 2;
+  stroke: #04070c;
+  font-size: 100px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+@keyframes stroke {
+  0% {
+    fill: rgb(250, 247, 246);
+    stroke: lime;
+    stroke-dashoffset: 25%;
+    stroke-dasharray: 0 50%;
+    stroke-width: 1;
+  }
+  70% {
+    fill: rgb(245, 242, 242);
+    stroke: rgba(4, 7, 12, 1);
+  }
+  80% {
+    fill: rgb(238, 230, 229);
+    stroke: lime;
+    stroke-width: 2;
+  }
+  100% {
+    fill: orange;
+    stroke: rgba(4, 7, 12, 0);
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 50% 0;
+    stroke-width: 0;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/*end of animated text*/
+
+#bottom {
+  width: 100%;
+}
+
+#credits-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  background-color: black;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+#c-middle {
+  font-family: "Shadows Into Light Two", cursive;
+  letter-spacing: 1px;
+  color: orangered;
+  text-shadow: 2px 2px 0 #f1f0f0, -1px -1px 0 #f8890a;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+ul li {
+  margin-left: -3rem;
+  list-style-type: none;
+  letter-spacing: 1px;
+}
+
+li {
+  font-family: "Shadows Into Light Two", cursive;
+  color: orange;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+ul li::before {
+  content: " 💀 ";
+}
+
+#location {
+  font-family: "Shadows Into Light Two", cursive;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+@media only screen and (max-width: 600px) {
+  .invite-container img {
+    width: 100%;
+    height: auto;
+  }
+
+  h1.title {
+    font-size: 30px;
+  }
+
+  h2.subtitle {
+    font-size: 20px;
+  }
+
+  h2.rotate {
+    margin-top: 1rem;
+    margin-left: -3rem;
+  }
+
+  .credits-container {
+    width: 100%;
+  }
+
+  ul li {
+    font-size: 0.9rem;
+    margin-left: -2rem;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
