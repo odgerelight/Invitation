@@ -46,7 +46,7 @@ export default function Home() {
 
         <div id="c-middle">🕷️</div>
         <div className="c-right">
-          <h2 className="subtitle rotate">Start: 07:00 AM</h2>
+          <h2 className="subtitle rotate">Start: 10:00 AM</h2>
         </div>
       </div>
 
