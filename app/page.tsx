@@ -37,7 +37,7 @@ export default function Home() {
         <div className="c-left">
           <ul>
             <li>Haunted Office</li>
-            <li>Customized boots</li>
+            <li>Customized booths</li>
             <li>BYE party</li>
             <li>After party</li>
             <li>Thursday Night</li>
